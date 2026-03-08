@@ -38,8 +38,8 @@ export default function Benefits() {
             {/* Mobile: full dark overlay for readability */}
             <div className="absolute inset-0 bg-slate-950/80 pointer-events-none z-10 lg:hidden" />
 
-            {/* Desktop: left-to-right — text readable on left, image clear on right */}
-            <div className="absolute inset-0 hidden lg:block pointer-events-none z-10" style={{ backgroundImage: "linear-gradient(to right, rgba(2,6,23,0.92) 0%, rgba(2,6,23,0.65) 30%, rgba(2,6,23,0.15) 60%, transparent 80%)" }} />
+            {/* Desktop: strong dark left half so text is always readable, fades right */}
+            <div className="absolute inset-0 hidden lg:block pointer-events-none z-10" style={{ backgroundImage: "linear-gradient(to right, rgba(2,6,23,0.97) 0%, rgba(2,6,23,0.96) 38%, rgba(2,6,23,0.80) 52%, rgba(2,6,23,0.30) 68%, transparent 85%)" }} />
 
             {/* Subtle top/bottom edge fades */}
             <div className="absolute top-0 left-0 right-0 h-16 bg-linear-to-b from-slate-950/60 to-transparent pointer-events-none z-10" />
@@ -61,7 +61,7 @@ export default function Benefits() {
                         <h2 className="text-3xl font-extrabold text-white sm:text-4xl mb-6 font-heading">
                             Why Choose Dream Labs Smart PP?
                         </h2>
-                        <p className="text-xl text-slate-400 mb-10 leading-relaxed">
+                        <p className="text-xl text-slate-300 mb-10 leading-relaxed">
                             We focus on the outcome for your clinic. Streamline operations, improve patient satisfaction, and drastically reduce administrative load.
                         </p>
 
@@ -74,7 +74,7 @@ export default function Benefits() {
                                             {benefit.title}
                                         </p>
                                     </dt>
-                                    <dd className="mt-2 ml-10 text-base text-slate-400 leading-relaxed">
+                                    <dd className="mt-2 ml-10 text-base text-slate-300 leading-relaxed">
                                         {benefit.description}
                                     </dd>
                                 </div>
