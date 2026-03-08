@@ -7,7 +7,10 @@ import {
     Pill,
     Receipt,
     ShieldCheck,
-    LineChart
+    LineChart,
+    MessagesSquare,
+    ClipboardList,
+    BellRing
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -75,6 +78,27 @@ export default function Features() {
             icon: LineChart,
             color: "text-fuchsia-400",
             bg: "bg-fuchsia-400/10"
+        },
+        {
+            title: "Internal Staff Messaging",
+            description: "Instant in-app messaging between doctors, receptionists, and pharmacists — keep your team aligned without leaving the platform.",
+            icon: MessagesSquare,
+            color: "text-sky-400",
+            bg: "bg-sky-400/10"
+        },
+        {
+            title: "Comprehensive Audit Logs",
+            description: "Full tamper-proof activity trail — every record access, edit, and transaction is logged with timestamps and user identity.",
+            icon: ClipboardList,
+            color: "text-orange-400",
+            bg: "bg-orange-400/10"
+        },
+        {
+            title: "Low Stock & Expiry Alerts",
+            description: "Proactive push notifications for medicines nearing expiry or falling below minimum stock thresholds — never run short again.",
+            icon: BellRing,
+            color: "text-red-400",
+            bg: "bg-red-400/10"
         }
     ];
 

@@ -73,14 +73,15 @@ export default function Benefits() {
             <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-cyan-600/8 blur-[100px] pointer-events-none z-10" />
 
             <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="lg:max-w-[55%]">
 
-                {/* Section label + heading — centred, Apple-style */}
+                {/* Section label + heading — left-aligned */}
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.6 }}
-                    className="text-center max-w-2xl mx-auto mb-14"
+                    className="text-left max-w-xl mb-14"
                 >
                     <p className="text-xs font-black tracking-[0.3em] text-indigo-400 uppercase mb-3">Why Choose Us</p>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-heading leading-tight tracking-tight">
@@ -100,7 +101,7 @@ export default function Benefits() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, margin: "-40px" }}
-                    className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto"
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                 >
                     {benefits.map((b, i) => {
                         const Icon = b.icon;
@@ -137,6 +138,7 @@ export default function Benefits() {
                         );
                     })}
                 </motion.div>
+                </div>
             </div>
         </section>
     );
