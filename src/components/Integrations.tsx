@@ -2,6 +2,16 @@
 
 import { motion } from "framer-motion";
 import { MessageSquare, Globe, Smartphone, Code2, CreditCard, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+const partnerLogos = [
+    { src: `${BASE}/partnerlogo/Twilio-Logo.png`,         alt: "Twilio",     width: 96  },
+    { src: `${BASE}/partnerlogo/MasterCard_Logo.svg.png`, alt: "Mastercard", width: 72  },
+    { src: `${BASE}/partnerlogo/sendgrid.png`,             alt: "SendGrid",   width: 100 },
+    { src: `${BASE}/partnerlogo/images.png`,               alt: "Partner",    width: 80  },
+];
 
 const integrations = [
     {
@@ -123,6 +133,37 @@ export default function Integrations() {
                         );
                     })}
                 </motion.div>
+
+                {/* ── Partner logo marquee ── */}
+                <div className="mt-16 pt-10 border-t border-slate-800">
+                    <p className="text-center text-xs font-semibold tracking-[0.2em] text-slate-500 uppercase mb-8">
+                        Trusted partners & integrations
+                    </p>
+
+                    {/* Overflow mask — fades edges */}
+                    <div
+                        className="relative overflow-hidden"
+                        style={{ maskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)" }}
+                    >
+                        {/* Scrolling track — duplicated for seamless loop */}
+                        <div className="flex animate-marquee w-max">
+                            {[...partnerLogos, ...partnerLogos, ...partnerLogos].map((logo, i) => (
+                                <div
+                                    key={i}
+                                    className="flex items-center justify-center mx-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                                >
+                                    <Image
+                                        src={logo.src}
+                                        alt={logo.alt}
+                                        width={logo.width}
+                                        height={40}
+                                        className="object-contain h-8 w-auto"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
