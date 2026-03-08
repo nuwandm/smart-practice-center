@@ -10,7 +10,7 @@ export default function Footer() {
 
                     <div className="md:col-span-1">
                         <div className="flex items-center gap-2 mb-4">
-                            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo.png`} alt="Dream Labs Smart PP Logo" width={36} height={36} className="object-contain shrink-0" />
+                            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo.png`} alt="Dream Labs Smart PP Logo" width={36} height={36} className="object-contain shrink-0 rounded-full" />
                             <span className="text-base sm:text-xl font-bold text-white font-heading">
                                 Dream Labs Smart PP
                             </span>
