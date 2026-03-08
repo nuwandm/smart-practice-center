@@ -124,26 +124,6 @@ export default function Integrations() {
                     })}
                 </motion.div>
 
-                {/* Bottom CTA strip */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="mt-12 text-center"
-                >
-                    <p className="text-slate-500 text-sm">
-                        Need a custom integration?{" "}
-                        <a
-                            href={`https://wa.me/94706151051?text=${encodeURIComponent("Hello! I need information about custom integrations for Smart PP.")}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-indigo-400 hover:text-indigo-300 font-medium transition-colors"
-                        >
-                            Contact our team →
-                        </a>
-                    </p>
-                </motion.div>
             </div>
         </section>
     );
