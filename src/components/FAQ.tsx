@@ -24,7 +24,7 @@ export default function FAQ() {
         },
         {
             question: "How does the SMS notification system work?",
-            answer: "We seamlessly integrate with Notify.lk or Twilio. Patients receive an automatic SMS upon registration, and another update when their token is nearly called, drastically reducing waiting room congestion."
+            answer: "We seamlessly integrate with SMSlenz.lk or Twilio. Patients receive an automatic SMS upon registration, and another update when their token is nearly called, drastically reducing waiting room congestion."
         },
         {
             question: "What happens to my data if my subscription ends?",
