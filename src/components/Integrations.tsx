@@ -11,6 +11,7 @@ const partnerLogos = [
     { src: `${BASE}/partnerlogo/MasterCard_Logo.svg.png`, alt: "Mastercard", width: 72  },
     { src: `${BASE}/partnerlogo/sendgrid.png`,             alt: "SendGrid",   width: 100 },
     { src: `${BASE}/partnerlogo/images.png`,               alt: "Partner",    width: 80  },
+    { src: `${BASE}/partnerlogo/smslenz-logo.png`,         alt: "SMSLenz",    width: 110 },
 ];
 
 const integrations = [
