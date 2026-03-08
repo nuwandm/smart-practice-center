@@ -9,9 +9,9 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-8 mb-12 border-b border-slate-800 pb-12">
 
                     <div className="md:col-span-1">
-                        <div className="flex items-center gap-3 mb-4">
-                            <Image src="/logo.png" alt="Dream Labs Smart PP Logo" width={40} height={40} className="object-contain" />
-                            <span className="text-xl font-bold text-white font-heading">
+                        <div className="flex items-center gap-2 mb-4">
+                            <Image src="/logo.png" alt="Dream Labs Smart PP Logo" width={36} height={36} className="object-contain shrink-0" />
+                            <span className="text-base sm:text-xl font-bold text-white font-heading">
                                 Dream Labs Smart PP
                             </span>
                         </div>

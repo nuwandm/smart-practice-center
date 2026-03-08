@@ -44,15 +44,18 @@ export default function Hero() {
             {/* Bottom: slim fade into next section */}
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent pointer-events-none z-10" />
 
-            {/* Left-to-right: dark behind text, fully clear by 45% */}
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/40 to-transparent pointer-events-none z-10" style={{ backgroundImage: "linear-gradient(to right, rgba(2,6,23,0.88) 0%, rgba(2,6,23,0.5) 30%, rgba(2,6,23,0.1) 55%, transparent 70%)" }} />
+            {/* Mobile: full dark overlay for readability */}
+            <div className="absolute inset-0 bg-slate-950/70 pointer-events-none z-10 sm:hidden" />
+
+            {/* Tablet+: left-to-right dark behind text, fully clear by 45% */}
+            <div className="absolute inset-0 hidden sm:block pointer-events-none z-10" style={{ backgroundImage: "linear-gradient(to right, rgba(2,6,23,0.88) 0%, rgba(2,6,23,0.5) 30%, rgba(2,6,23,0.1) 55%, transparent 70%)" }} />
 
             {/* ── Content — bottom-left ── */}
             <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 animate="visible"
-                className="relative z-20 w-full max-w-2xl px-8 lg:px-16 pt-36 lg:pt-44 pb-10"
+                className="relative z-20 w-full max-w-2xl px-5 sm:px-8 lg:px-16 pt-28 sm:pt-32 lg:pt-44 pb-12"
             >
                 {/* Badge */}
                 <motion.div variants={fadeInLeft} className="mb-5">
@@ -65,7 +68,7 @@ export default function Hero() {
                 {/* Heading */}
                 <motion.h1
                     variants={fadeInLeft}
-                    className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white mb-5 font-heading leading-[1.06]"
+                    className="text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white mb-5 font-heading leading-[1.06]"
                 >
                     Transform your practice with{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-300 to-emerald-400">
@@ -76,7 +79,7 @@ export default function Hero() {
                 {/* Description */}
                 <motion.p
                     variants={fadeInLeft}
-                    className="text-lg md:text-xl text-slate-300/90 max-w-lg leading-relaxed mb-8"
+                    className="text-base sm:text-lg md:text-xl text-slate-300/90 max-w-lg leading-relaxed mb-8"
                 >
                     Eliminate waiting room chaos with real-time queues, seamless billing, and
                     integrated pharmacy management. Purpose-built for modern Sri Lankan medical practitioners.

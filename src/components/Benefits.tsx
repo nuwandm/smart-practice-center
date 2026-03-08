@@ -35,12 +35,15 @@ export default function Benefits() {
             />
 
             {/* Gradient overlays */}
-            {/* Precise left-to-right: text readable on left, image clear on right */}
-            <div className="absolute inset-0 pointer-events-none z-10" style={{ backgroundImage: "linear-gradient(to right, rgba(2,6,23,0.92) 0%, rgba(2,6,23,0.65) 30%, rgba(2,6,23,0.15) 60%, transparent 80%)" }} />
+            {/* Mobile: full dark overlay for readability */}
+            <div className="absolute inset-0 bg-slate-950/80 pointer-events-none z-10 lg:hidden" />
+
+            {/* Desktop: left-to-right — text readable on left, image clear on right */}
+            <div className="absolute inset-0 hidden lg:block pointer-events-none z-10" style={{ backgroundImage: "linear-gradient(to right, rgba(2,6,23,0.92) 0%, rgba(2,6,23,0.65) 30%, rgba(2,6,23,0.15) 60%, transparent 80%)" }} />
 
             {/* Subtle top/bottom edge fades */}
-            <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-slate-950/60 to-transparent pointer-events-none z-10" />
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-950/60 to-transparent pointer-events-none z-10" />
+            <div className="absolute top-0 left-0 right-0 h-16 bg-linear-to-b from-slate-950/60 to-transparent pointer-events-none z-10" />
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-slate-950/60 to-transparent pointer-events-none z-10" />
 
             {/* Existing glow blob */}
             <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/20 blur-[120px] rounded-full mix-blend-screen pointer-events-none"></div>

@@ -57,8 +57,8 @@ export default function FAQ() {
                 >
                     <Accordion className="w-full space-y-4">
                         {faqs.map((faq, idx) => (
-                            <AccordionItem key={idx} value={`item-${idx}`} className="border-slate-800 bg-slate-900/60 px-6 rounded-xl overflow-hidden data-[state=open]:border-indigo-500/50 transition-all duration-300">
-                                <AccordionTrigger className="text-left font-medium text-lg hover:no-underline hover:text-indigo-300 py-6 text-slate-200">
+                            <AccordionItem key={idx} value={`item-${idx}`} className="border-slate-800 bg-slate-900/60 px-4 sm:px-6 rounded-xl overflow-hidden data-[state=open]:border-indigo-500/50 transition-all duration-300">
+                                <AccordionTrigger className="text-left font-medium text-base sm:text-lg hover:no-underline hover:text-indigo-300 py-5 sm:py-6 text-slate-200">
                                     {faq.question}
                                 </AccordionTrigger>
                                 <AccordionContent className="text-slate-400 text-base leading-relaxed pb-6">
