@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
 
+const basePath = '/smart-practice-center';
+
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/smart-practice-center',
-  assetPrefix: '/smart-practice-center/',
+  basePath,
+  assetPrefix: `${basePath}/`,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
   },

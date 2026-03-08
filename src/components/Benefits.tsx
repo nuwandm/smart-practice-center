@@ -28,7 +28,7 @@ export default function Benefits() {
         <section className="w-full py-24 border-t border-slate-800 text-slate-50 relative overflow-hidden">
             {/* Background image */}
             <Image
-                src="/Thinking.jpg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/Thinking.jpg`}
                 alt="Benefits background"
                 fill
                 className="object-cover object-center"

@@ -28,7 +28,7 @@ export default function Hero() {
 
             {/* ── Background image ── */}
             <Image
-                src="/Hero.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/Hero.png`}
                 alt="Dream Labs Smart PP dashboard"
                 fill
                 className="object-cover"

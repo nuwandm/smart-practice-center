@@ -31,7 +31,7 @@ export default function Header() {
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-                        <Image src="/logo.png" alt="Dream Labs Smart PP Logo" width={36} height={36} className="object-contain shrink-0" />
+                        <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo.png`} alt="Dream Labs Smart PP Logo" width={36} height={36} className="object-contain shrink-0" />
                         <span className="text-base sm:text-xl font-bold text-white font-heading truncate">
                             Dream Labs Smart PP
                         </span>
