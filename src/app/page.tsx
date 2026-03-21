@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Benefits from "@/components/Benefits";
 import Workflow from "@/components/Workflow";
+import OnlineAppointment from "@/components/OnlineAppointment";
 import Integrations from "@/components/Integrations";
 import Comparison from "@/components/Comparison";
 import Pricing from "@/components/Pricing";
@@ -19,6 +20,7 @@ export default function Home() {
       <Features />
       <Benefits />
       <Workflow />
+      <OnlineAppointment />
       <Integrations />
       <Comparison />
       <Pricing />

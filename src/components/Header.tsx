@@ -101,6 +101,14 @@ export default function Header() {
                                         FAQ
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink
+                                        href="#online-appointment"
+                                        className={`${navigationMenuTriggerStyle()} bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400/20 hover:text-cyan-300 focus:bg-cyan-400/20 rounded-lg text-sm font-semibold transition-colors duration-200 border border-cyan-400/20`}
+                                    >
+                                        Book Online
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
                             </NavigationMenuList>
                         </NavigationMenu>
                     </div>
@@ -147,6 +155,9 @@ export default function Header() {
                         </Link>
                         <Link href="#faq" className="block px-3 py-2.5 text-slate-300/80 hover:text-white hover:bg-white/[0.06] rounded-xl text-sm transition-colors" onClick={() => setMobileOpen(false)}>
                             FAQ
+                        </Link>
+                        <Link href="#online-appointment" className="block px-3 py-2.5 text-cyan-400 hover:text-cyan-300 hover:bg-cyan-400/10 rounded-xl text-sm font-semibold transition-colors" onClick={() => setMobileOpen(false)}>
+                            Book Online
                         </Link>
                     </div>
                     <div className="border-t border-white/[0.06] my-3" />

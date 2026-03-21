@@ -10,7 +10,8 @@ import {
     LineChart,
     MessagesSquare,
     ClipboardList,
-    BellRing
+    BellRing,
+    QrCode
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -37,6 +38,14 @@ export default function Features() {
     };
 
     const features = [
+        {
+            title: "Online Appointments via QR Code",
+            description: "Patients scan your clinic's unique QR code, fill a 30-second form, and join the queue remotely — from anywhere, any time. Auto SMS confirmation included.",
+            icon: QrCode,
+            color: "text-teal-400",
+            bg: "bg-teal-400/10",
+            badge: "New",
+        },
         {
             title: "Intelligent Queue & Token Management",
             description: "Real-time token tracking, doctor availability statuses (Start/Pause/Stop), and precise waiting time estimates.",
@@ -132,12 +141,19 @@ export default function Features() {
                     {features.map((feature, idx) => {
                         const Icon = feature.icon;
                         return (
-                            <motion.div key={idx} variants={itemVariants} className="group h-full w-full">
-                                <Card className="h-full bg-slate-900/40 border-slate-800 backdrop-blur-md overflow-hidden hover:bg-slate-800/60 hover:border-slate-700 transition-all duration-300 relative group">
+                            <motion.div key={idx} variants={itemVariants} className={`group h-full w-full ${features.length % 3 === 1 && idx === features.length - 1 ? 'md:col-span-2 lg:col-span-3' : ''}`}>
+                                <Card className={`h-full bg-slate-900/40 backdrop-blur-md overflow-hidden transition-all duration-300 relative group ${'badge' in feature ? 'border-teal-500/30 hover:bg-slate-800/60 hover:border-teal-400/50' : 'border-slate-800 hover:bg-slate-800/60 hover:border-slate-700'}`}>
                                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     <CardHeader>
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 ${feature.bg}`}>
-                                            <Icon className={`h-6 w-6 ${feature.color}`} />
+                                        <div className="flex items-start justify-between mb-4">
+                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${feature.bg}`}>
+                                                <Icon className={`h-6 w-6 ${feature.color}`} />
+                                            </div>
+                                            {'badge' in feature && (
+                                                <span className="text-[10px] font-black tracking-widest uppercase px-2 py-0.5 rounded-full bg-teal-400/10 border border-teal-400/30 text-teal-400">
+                                                    {(feature as typeof feature & { badge: string }).badge}
+                                                </span>
+                                            )}
                                         </div>
                                         <CardTitle className="text-xl text-slate-100 font-heading">{feature.title}</CardTitle>
                                     </CardHeader>
