@@ -48,7 +48,7 @@ export default function Header() {
                 <div className="flex h-16 items-center justify-between">
 
                     {/* Logo */}
-                    <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                    <Link href="#hero" className="flex items-center gap-2 sm:gap-3 min-w-0">
                         <Image
                             src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo.png`}
                             alt="Dream Labs Smart PP Logo"
@@ -59,7 +59,7 @@ export default function Header() {
                         <span className="text-base sm:text-lg font-semibold text-white/90 font-heading truncate tracking-tight">
                             Dream Labs Smart PP
                         </span>
-                    </div>
+                    </Link>
 
                     {/* Desktop nav */}
                     <div className="hidden md:flex items-center">

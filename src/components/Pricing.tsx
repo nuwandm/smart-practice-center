@@ -1,21 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Sparkles } from "lucide-react";
+import { Check, X, Sparkles } from "lucide-react";
 
 export default function Pricing() {
     const plans = [
         {
             name: "Basic",
-            description: "Ideal for solo practitioners.",
+            description: "Ideal for small clinics.",
             price: "3,000",
             setup: "60,000",
+            cta: "Upgrade to Basic",
             features: [
-                "Single Doctor Profile",
-                "Token & Queue Management",
-                "Basic Patient History",
-                "Standard Billing & Invoicing",
-                "Email Support"
+                { text: "2 Doctors, 10 Staff", included: true },
+                { text: "Inventory management", included: true },
+                { text: "Standard reports", included: true },
+                { text: "Billing & invoicing", included: true },
+                { text: "24/7 support", included: true },
+                { text: "SMS notifications", included: false },
+                { text: "Advanced analytics", included: false },
+                { text: "Multi-location", included: false },
             ],
             popular: false,
             accentColor: "from-slate-400/10 to-slate-600/5",
@@ -27,12 +31,16 @@ export default function Pricing() {
             description: "Perfect for multi-doctor clinics.",
             price: "5,000",
             setup: "60,000",
+            cta: "Upgrade to Pro",
             features: [
-                "Up to 5 Doctor Profiles",
-                "Advanced Queue Syncing",
-                "Full Pharmacy & Inventory",
-                "Automated SMS Notifications",
-                "Priority Email & Chat Support"
+                { text: "5 Doctors, 20 Staff", included: true },
+                { text: "Online appointment booking (QR)", included: true },
+                { text: "Inventory + low-stock alerts", included: true },
+                { text: "Advanced analytics & reports", included: true },
+                { text: "SMS notifications (Notify.lk / Twilio)", included: true },
+                { text: "Activity log & audit trail", included: true },
+                { text: "Priority support", included: true },
+                { text: "Multi-location", included: false },
             ],
             popular: true,
             accentColor: "from-indigo-500/15 to-cyan-500/10",
@@ -41,15 +49,17 @@ export default function Pricing() {
         },
         {
             name: "Enterprise",
-            description: "Full suite with priority SLA.",
+            description: "Full suite for large practices.",
             price: "Custom",
             setup: "Custom",
+            cta: "Upgrade to Enterprise",
             features: [
-                "Unlimited Doctor Profiles",
-                "Multi-Clinic Support",
-                "Advanced Analytics Dashboard",
-                "Custom Feature Integrations",
-                "24/7 Dedicated Support"
+                { text: "Unlimited doctors & staff", included: true },
+                { text: "Multi-location support", included: true },
+                { text: "Full analytics suite", included: true },
+                { text: "SMS notifications (Notify.lk / Twilio)", included: true },
+                { text: "Activity log & audit trail", included: true },
+                { text: "Dedicated support", included: true },
             ],
             popular: false,
             accentColor: "from-emerald-500/10 to-teal-500/5",
@@ -144,10 +154,18 @@ export default function Pricing() {
                                     <ul className="space-y-3 flex-1 mb-6">
                                         {plan.features.map((feature, i) => (
                                             <li key={i} className="flex items-center gap-3">
-                                                <div className={`shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${plan.popular ? 'bg-indigo-500/15' : 'bg-white/5'}`}>
-                                                    <Check className={`h-3 w-3 ${plan.checkColor}`} />
-                                                </div>
-                                                <span className="text-sm text-slate-300">{feature}</span>
+                                                {feature.included ? (
+                                                    <div className={`shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${plan.popular ? 'bg-indigo-500/15' : 'bg-white/5'}`}>
+                                                        <Check className={`h-3 w-3 ${plan.checkColor}`} />
+                                                    </div>
+                                                ) : (
+                                                    <div className="shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-white/5">
+                                                        <X className="h-3 w-3 text-slate-600" />
+                                                    </div>
+                                                )}
+                                                <span className={`text-sm ${feature.included ? 'text-slate-300' : 'text-slate-600'}`}>
+                                                    {feature.text}
+                                                </span>
                                             </li>
                                         ))}
                                     </ul>
@@ -161,7 +179,7 @@ export default function Pricing() {
                                                 : "bg-white/[0.07] hover:bg-white/12 border border-white/8 text-white"
                                         }`}
                                     >
-                                        {plan.price === "Custom" ? "Contact Sales" : "Start Free Trial"}
+                                        {plan.cta}
                                     </a>
                                 </div>
 
