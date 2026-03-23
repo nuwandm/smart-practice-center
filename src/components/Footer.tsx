@@ -81,7 +81,7 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="h-5 w-5 text-indigo-400 shrink-0" />
                                 <span className="text-slate-400">
-                                    Dream Labs Solutions,<br />
+                                    Dream Labs Solutions<br />
                                     561,<br />
                                     Eldeniya,<br/>
                                     Kadwatha
