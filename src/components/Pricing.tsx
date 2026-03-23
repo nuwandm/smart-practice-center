@@ -9,7 +9,7 @@ export default function Pricing() {
             name: "Basic",
             description: "Ideal for small clinics.",
             price: "3,000",
-            setup: "60,000",
+            setup: "80,000",
             cta: "Upgrade to Basic",
             features: [
                 { text: "2 Doctors, 10 Staff", included: true },
@@ -30,7 +30,7 @@ export default function Pricing() {
             name: "Pro",
             description: "Perfect for multi-doctor clinics.",
             price: "5,000",
-            setup: "60,000",
+            setup: "80,000",
             cta: "Upgrade to Pro",
             features: [
                 { text: "5 Doctors, 20 Staff", included: true },
