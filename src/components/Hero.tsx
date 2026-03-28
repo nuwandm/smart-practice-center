@@ -3,7 +3,6 @@
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
 const fadeInLeft: Variants = {
     hidden: { opacity: 0, x: -40 },
@@ -88,22 +87,24 @@ export default function Hero() {
                 {/* CTA buttons */}
                 <motion.div
                     variants={fadeInLeft}
-                    className="flex flex-col sm:flex-row gap-4"
+                    className="flex flex-row flex-wrap gap-4"
                 >
-                    <Button
-                        size="lg"
-                        className="h-13 px-8 text-base bg-white text-slate-950 hover:bg-slate-100 rounded-full shadow-2xl font-bold group transition-all"
+                    <a
+                        href="https://private-practice-center-client.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center h-13 px-8 text-base bg-white text-slate-950 hover:bg-slate-100 rounded-full shadow-2xl font-bold transition-all"
                     >
                         Get Started Free
                         <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </Button>
-                    <Button
-                        size="lg"
-                        variant="outline"
-                        className="h-13 px-8 text-base rounded-full border-white/25 bg-white/10 hover:bg-white/20 text-white backdrop-blur font-semibold transition-all"
+                    </a>
+                    <a
+                        href="#contact"
+                        className="group inline-flex items-center h-13 px-8 text-base rounded-full border border-white/25 bg-white/10 hover:bg-white/20 text-white backdrop-blur font-semibold transition-all"
                     >
                         Request a Demo
-                    </Button>
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </a>
                 </motion.div>
             </motion.div>
         </section>

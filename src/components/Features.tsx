@@ -11,7 +11,8 @@ import {
     MessagesSquare,
     ClipboardList,
     BellRing,
-    QrCode
+    QrCode,
+    CalendarDays
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -45,6 +46,13 @@ export default function Features() {
             color: "text-teal-400",
             bg: "bg-teal-400/10",
             badge: "New",
+        },
+        {
+            title: "Doctor & Clinic Calendar",
+            description: "Visual scheduling calendar for doctors and clinic staff. Manage appointment slots, block unavailable times, set recurring schedules, and view daily or weekly bookings at a glance.",
+            icon: CalendarDays,
+            color: "text-violet-400",
+            bg: "bg-violet-400/10",
         },
         {
             title: "Intelligent Queue & Token Management",
