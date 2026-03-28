@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { UserPlus, Clock, Stethoscope, Pill, CreditCard } from "lucide-react";
+import { QrCode, UserPlus, Stethoscope, Pill, CreditCard } from "lucide-react";
 
 const steps = [
     {
         id: 1,
-        title: "Walk-In",
-        subtitle: "A frictionless arrival",
-        description: "Patient walks in and the receptionist captures details in seconds. A unique token is issued — zero paperwork, zero chaos.",
-        icon: UserPlus,
+        title: "Online Appointment",
+        subtitle: "Book before you arrive",
+        description: "Patients schedule appointments online in seconds. A unique QR code is instantly generated and sent — scan it at the clinic to check in, skip the queue, and start the visit without any paperwork.",
+        icon: QrCode,
         gradient: "from-indigo-600 via-violet-600 to-indigo-800",
         glow: "rgba(99,102,241,0.4)",
         accent: "#818cf8",
@@ -17,10 +17,10 @@ const steps = [
     },
     {
         id: 2,
-        title: "Waiting",
-        subtitle: "Always in the know",
-        description: "A live queue display shows the patient their exact position. Smart SMS alerts keep them informed without anxiety.",
-        icon: Clock,
+        title: "Walk-In",
+        subtitle: "A frictionless arrival",
+        description: "No appointment? No problem. Walk-in patients are registered by the receptionist in seconds. A unique queue token is issued on the spot — zero paperwork, zero chaos, seamless entry.",
+        icon: UserPlus,
         gradient: "from-cyan-600 via-sky-500 to-cyan-800",
         glow: "rgba(6,182,212,0.4)",
         accent: "#67e8f9",
@@ -30,7 +30,7 @@ const steps = [
         id: 3,
         title: "Consultation",
         subtitle: "Medicine meets technology",
-        description: "The doctor opens a rich patient timeline — vitals, history, allergies. They prescribe digitally in seconds, fully audit-trailed.",
+        description: "The doctor opens a rich patient timeline — vitals, history, allergies, and past visits. Digital prescriptions are issued in seconds, fully audit-trailed and instantly forwarded to pharmacy.",
         icon: Stethoscope,
         gradient: "from-emerald-600 via-teal-500 to-emerald-800",
         glow: "rgba(16,185,129,0.4)",
@@ -41,7 +41,7 @@ const steps = [
         id: 4,
         title: "Pharmacy",
         subtitle: "Precision dispensing",
-        description: "The pharmacist receives the prescription instantly. They dispense with full stock tracking, expiry checks, and partial-fill support.",
+        description: "The pharmacist receives the digital prescription the moment it's issued. Medicines are dispensed with real-time stock tracking, expiry validation, and partial-fill support — accurate every time.",
         icon: Pill,
         gradient: "from-amber-600 via-orange-500 to-amber-800",
         glow: "rgba(245,158,11,0.4)",
@@ -52,7 +52,7 @@ const steps = [
         id: 5,
         title: "Checkout",
         subtitle: "Close the loop",
-        description: "Billing is auto-generated from consultation + pharmacy data. One click — a branded receipt is printed. The cycle is complete.",
+        description: "Billing is auto-generated from consultation and pharmacy data — no manual entry, no errors. One click prints a branded receipt. Payment is confirmed and the patient's visit is fully recorded.",
         icon: CreditCard,
         gradient: "from-rose-600 via-pink-500 to-rose-800",
         glow: "rgba(244,63,94,0.4)",
